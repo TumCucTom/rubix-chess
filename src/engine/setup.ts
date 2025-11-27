@@ -15,8 +15,8 @@ type SetupSpec = {
 const BOARD_TOP = BOARD_SIZE - 1;
 
 const SETUPS: SetupSpec[] = [
-  { face: 'front', rank: 0, pawnsRank: 1, color: 'white', idPrefix: 'w' },
-  { face: 'back', rank: BOARD_TOP, pawnsRank: BOARD_TOP - 1, color: 'black', idPrefix: 'b' },
+  { face: 'top', rank: 0, pawnsRank: 1, color: 'white', idPrefix: 'w' },
+  { face: 'top', rank: BOARD_TOP, pawnsRank: BOARD_TOP - 1, color: 'black', idPrefix: 'b' },
 ];
 
 export function buildInitialState(): GameState {
