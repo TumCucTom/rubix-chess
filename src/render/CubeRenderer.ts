@@ -126,12 +126,12 @@ export class CubeRenderer {
   private squareColor(descriptor: ReturnType<typeof facePositionToDescriptor>): string {
     const parity = (descriptor.u + descriptor.v) % 2;
     const palette: Record<typeof descriptor.face, [string, string]> = {
-      front: ['#263238', '#37474f'],
-      back: ['#311b92', '#512da8'],
-      left: ['#1b5e20', '#2e7d32'],
-      right: ['#01579b', '#0277bd'],
-      top: ['#6d4c41', '#8d6e63'],
-      bottom: ['#455a64', '#607d8b'],
+      front: ['#e53935', '#c62828'],      // Red (standard Rubik's cube front)
+      back: ['#ff6d00', '#e65100'],        // Orange (standard Rubik's cube back)
+      left: ['#43a047', '#2e7d32'],        // Green (standard Rubik's cube left)
+      right: ['#1e88e5', '#1565c0'],       // Blue (standard Rubik's cube right)
+      top: ['#ffffff', '#f5f5f5'],          // White (standard Rubik's cube top)
+      bottom: ['#fdd835', '#fbc02d'],       // Yellow (standard Rubik's cube bottom)
     };
     return palette[descriptor.face][parity];
   }
